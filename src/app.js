@@ -3,6 +3,8 @@ const path = require('path');
 const express = require('express'); // this returns a function
 const hbs = require('hbs');
 const app = express();
+const port = process.env.PORT || 3000;
+
 const geoCode = require('./utils/geoCode');
 const getWeather = require('./utils/forecast');
 
@@ -126,6 +128,6 @@ app.get('/about', (req, res) => {
 });
 */
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('Server running...');
 });
